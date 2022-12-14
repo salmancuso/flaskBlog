@@ -33,9 +33,11 @@ Other tags worth using in jinja
 {% for topping in pizzaToppings %}
     {% if topping == 41 %}
         {{ topping + 100 }} <BR/>
-    {% else % }
+    {% else %}
         {{ topping }} <BR/>
     {% endif %}
 {% endfor %}
-
 ```
+
+## Error handleing for bogus pages
+`@app.errorhandler(404)`
