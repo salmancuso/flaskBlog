@@ -5,13 +5,8 @@ Building a simple flask blog for practice.
 ## REFERENCE MATERIALS
 https://www.youtube.com/playlist?list=PLCC34OHNcOtolz2Vd9ZSeSXWc8Bq23yEz
 
-
-## Enviromental variables 
-`export FLASK_ENV=development`
-`export FLASK_APP=hello.py` -- This points to the main app. 
-
 ## Run Flask outside of python
-`flask run`
+`flask --app hello.py run`
 
 ## Jinja2 to pull pythonic ways into websites
 https://jinja.palletsprojects.com/en/3.1.x/

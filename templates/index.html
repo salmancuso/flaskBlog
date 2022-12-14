@@ -1,15 +1,19 @@
-<h1>Hello World</h1>
-<P>This is my first FLASK site</P>
-<p>{{firstName}}</p>
-<p>{{ stuff | safe}}</p>
-<H4>Pizza Toppings</H4>
+{% extends 'base.html' %}
 
-{% for topping in pizzaToppings %}
-    {% if topping == 41 %}
-        {{ topping + 100 }}<BR/>
-    {% else %}
-        {{ topping }}<BR/>
-    {% endif %}
-{% endfor %}
-<BR><BR>
-{{ pizzaToppings.0 }}
+{% block content %}
+    <h1>Hello World</h1>
+    <P>This is my first FLASK site</P>
+    <p>{{firstName}}</p>
+    <p>{{ stuff | safe}}</p>
+    <H4>Pizza Toppings</H4>
+
+    {% for topping in pizzaToppings %}
+        {% if topping == 41 %}
+            {{ topping + 100 }}<BR/>
+        {% else %}
+            {{ topping }}<BR/>
+        {% endif %}
+    {% endfor %}
+
+
+{% endblock %}
