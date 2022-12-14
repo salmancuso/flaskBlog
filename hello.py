@@ -11,9 +11,13 @@ app = Flask(__name__)
 ####################################################################
 @app.route('/')  #Create main index route
 def index():
-    return render_template("index.html")
+    first_name = "John"
+    stuff = "this is <strong>bold</strong> text"
+    pizzaToppings = ["Cheese", "Sauce", "Mushrooms", "Olivs", "Sausage", 41]
+    return render_template("index.html", firstName = first_name, stuff=stuff, pizzaToppings=pizzaToppings )
 
 #http://127.0.0.1:5000/user/Sal
 @app.route('/user/<name>')
 def user(name):
-    return f"<h1>Hello {name}!!!</h1>"
+
+    return render_template("user.html", userName=name)
