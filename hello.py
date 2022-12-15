@@ -21,14 +21,13 @@ def index():
 def user(name):
     return render_template("user.html", name=name)
 
-
 @app.route('/documentation')
 def documentation():
     return render_template("documentation.html")
 
 
 ####################################################################
-## Error Handeling
+## Error Handeling Router decorators
 ####################################################################
 @app.errorhandler(404)
 def page_not_found(e):
