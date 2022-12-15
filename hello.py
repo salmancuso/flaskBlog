@@ -19,7 +19,12 @@ def index():
 #http://127.0.0.1:5000/user/Sal
 @app.route('/user/<name>')
 def user(name):
-    return render_template("user.html", userName=name)
+    return render_template("user.html", name=name)
+
+
+@app.route('/documentation')
+def documentation():
+    return render_template("documentation.html")
 
 
 ####################################################################
@@ -32,3 +37,7 @@ def page_not_found(e):
 @app.errorhandler(500)
 def internalServerError(e):
     return render_template("500.html"), 500
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
